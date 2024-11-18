@@ -471,7 +471,7 @@ html {
     width: 0%;
   }
   100% {
-    width: 0%;
+    width: 30%;
   }
 }
 
@@ -641,6 +641,22 @@ html {
 
 .curriculum button:hover .overlay {
   width: 100%;
+}
+
+.aparecerDerecha,
+.aparecerIzquierda {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.aparecerIzquierda {
+  transform: translateX(50px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Seccion Mis Proyectos */
@@ -817,6 +833,44 @@ html {
   height: 287px;
 }
 
+.ventana p .video4 {
+  margin-top: -271px;
+  position: absolute;
+  margin-left: 227px;
+  width: 764px;
+  height: 406px;
+}
+
+.ventana p .video5 {
+  margin-top: 142px;
+  position: absolute;
+  margin-left: 227px;
+  width: 730px;
+  height: 366px;
+}
+
+.ventana p .video6 {
+  margin-top: 70px;
+  position: absolute;
+  margin-left: -538px;
+  width: 730px;
+  height: 366px;
+}
+
+.ventana p .word4 img {
+  position: absolute;
+  margin-left: -735px;
+  margin-top: 60px;
+  height: 170px;
+}
+
+.ventana p .power4 img {
+  position: absolute;
+  margin-left: -735px;
+  margin-top: 250px;
+  height: 170px;
+}
+
 #cerrar {
   position: absolute;
   width: fit-content;
@@ -858,7 +912,7 @@ html {
 .boton-izquierda,
 .boton-derecha {
   position: absolute;
-  top: 484%;
+  top: 550%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;

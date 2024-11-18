@@ -39,7 +39,21 @@ function efectoHabilidades() {
 // Detecto el scrolling para aplicar la animacion de la barra de habilidades
 window.onscroll = function () {
   efectoHabilidades();
+  // Lo pongo aqui para no tener que crear otra funcion onScroll y es de la parte del curriculum
+  mostrarEnScroll();
 };
+
+// Curriculum
+const items = document.querySelectorAll(".aparecerDerecha, .aparecerIzquierda");
+
+function mostrarEnScroll() {
+  items.forEach((item) => {
+    const rect = item.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      item.classList.add("visible");
+    }
+  });
+}
 
 // Ventana emergente
 function abrir1() {
@@ -66,6 +80,15 @@ function abrir3() {
 
 function cerrar3() {
   document.getElementById("vent3").style.display = "none";
+}
+
+// Ventana emergente 4
+function abrir4() {
+  document.getElementById("vent4").style.display = "block";
+}
+
+function cerrar4() {
+  document.getElementById("vent4").style.display = "none";
 }
 
 // Para hacer el slider de los puntos
